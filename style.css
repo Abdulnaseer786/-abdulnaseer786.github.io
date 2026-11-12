@@ -18,3 +18,10 @@
 .reference-meta{display:flex;justify-content:space-between;width:min(760px,100%);font:9px var(--mono);letter-spacing:1.5px;color:#6f6f6f}
 .reference-hero .scroll-cue{width:100%}
 @media(max-width:650px){.reference-hero{padding-top:105px;min-height:100svh}.reference-stage{min-height:650px}.reference-title{font-size:clamp(34px,10vw,58px)}.particle-portrait{height:360px;width:100%}.reference-meta{font-size:8px;gap:18px;line-height:1.7}.reference-actions{margin-bottom:28px}.hero-label{font-size:8px;gap:8px}.hero-label small{font-size:8px}}
+
+/* Animated name reveal */
+.reference-title{opacity:0;filter:blur(12px);transform:translateY(24px);animation:nameReveal 1.35s cubic-bezier(.2,.75,.2,1) .25s forwards}
+.reference-title span{display:inline-block;animation:nameGlow 4s ease-in-out 1.7s infinite alternate}
+@keyframes nameReveal{to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@keyframes nameGlow{from{text-shadow:0 0 0 #a9b4c000}to{text-shadow:0 0 24px #a9b4c044}}
+@media(prefers-reduced-motion:reduce){.reference-title,.reference-title span{animation:none;opacity:1;filter:none;transform:none}}
