@@ -11,7 +11,7 @@ if(oldCore){
   portrait.loading="eager";
   frame.appendChild(portrait);
   oldCore.replaceWith(frame);
-  fetch("profile-photo.webp.b64").then(response=>{if(!response.ok)throw new Error("Portrait asset unavailable");return response.text();})
+  fetch("profile-photo.webp.b64?v=20261112-3").then(response=>{if(!response.ok)throw new Error("Portrait asset unavailable");return response.text();})
     .then(encoded=>{portrait.src="data:image/webp;base64,"+encoded.trim();})
     .catch(()=>{portrait.alt="Professional portrait unavailable";});
 }
