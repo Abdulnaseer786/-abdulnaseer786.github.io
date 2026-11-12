@@ -40,3 +40,13 @@
 @keyframes labelFloat{0%,100%{translate:0 0}50%{translate:0 -9px}}
 @media(max-width:600px){.art-label{padding:6px 8px;font-size:6px}.hero-art:after{bottom:6%}.project-card{box-shadow:0 14px 35px #0005}}
 @media(prefers-reduced-motion:reduce){.art-label{animation:none}}
+
+/* Personal portrait hero treatment */
+.profile-frame{position:relative;z-index:3;width:clamp(210px,25vw,310px);aspect-ratio:4/5;border-radius:48% 48% 18px 18px;overflow:hidden;border:1px solid #a6fff080;background:linear-gradient(145deg,#1b303b,#0a111b);box-shadow:0 28px 80px #000b,0 0 55px #80e5e022;transform:translateZ(35px);isolation:isolate}
+.profile-frame:before{content:"";position:absolute;inset:8px;border:1px solid #d8fff033;border-radius:inherit;z-index:2;pointer-events:none}
+.profile-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,#071018a8 100%);z-index:1;pointer-events:none}
+.profile-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:saturate(.94) contrast(1.02);transform:scale(1.025)}
+.hero-art .orbit-a{width:390px;height:280px}
+.hero-art .orbit-b{width:460px;height:330px}
+@media(max-width:850px){.profile-frame{width:245px}.hero-art .orbit-a{width:320px;height:220px}.hero-art .orbit-b{width:360px;height:260px}}
+@media(max-width:600px){.profile-frame{width:205px}.hero-art .orbit-a{width:270px;height:190px}.hero-art .orbit-b{width:310px;height:220px}}
